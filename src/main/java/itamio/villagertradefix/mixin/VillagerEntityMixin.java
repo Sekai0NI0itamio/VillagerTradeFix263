@@ -78,7 +78,7 @@ public abstract class VillagerEntityMixin extends MerchantEntity {
     private void setVillagerDataMixin(VillagerData villagerData, CallbackInfo info, VillagerData villagerData2) {
         if (!offerList.contains(this.getOffers())) {
             offerList.add(this.getOffers());
-            jobList.add(villagerData2.getProfession().toString());
+            jobList.add(villagerData2.profession().toString());
         }
     }
 
@@ -93,11 +93,10 @@ public abstract class VillagerEntityMixin extends MerchantEntity {
     @Override
     public TradeOfferList getOffers() {
         if (this.offers == null) {
-            if (this.jobList != null && this.jobList.contains(((VillagerEntity) (Object) this).getVillagerData().getProfession().toString())) {
-                this.offers = this.offerList.get(this.jobList.indexOf(((VillagerEntity) (Object) this).getVillagerData().getProfession().toString()));
+            if (this.jobList != null && this.jobList.contains(((VillagerEntity) (Object) this).getVillagerData().profession().toString())) {
+                this.offers = this.offerList.get(this.jobList.indexOf(((VillagerEntity) (Object) this).getVillagerData().profession().toString()));
             } else {
-                this.offers = new TradeOfferList(0);
-                this.fillRecipes(this.getWorld());
+                this.fillRecipes(this.getEntityWorld());
             }
         }
         return this.offers;

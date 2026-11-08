@@ -95,6 +95,7 @@ public abstract class VillagerEntityMixin extends MerchantEntity {
             if (this.jobList != null && this.jobList.contains(((VillagerEntity) (Object) this).getVillagerData().getProfession().toString())) {
                 this.offers = this.offerList.get(this.jobList.indexOf(((VillagerEntity) (Object) this).getVillagerData().getProfession().toString()));
             } else {
+                this.offers = new TradeOfferList(new NbtCompound());
                 this.fillRecipes();
             }
         }

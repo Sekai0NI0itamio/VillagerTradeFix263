@@ -1,7 +1,7 @@
 NOTICE
-VillagerTradeFix (Itamio port for Minecraft 26.3)
-Unofficial port of VillagerTradeFix by Globox1997
+VillagerTradeFix (Itamio port for Minecraft 1.20.1)
+Unofficial full port of VillagerTradeFix by Globox1997
 (https://github.com/Globox1997/VillagerTradeFix, MIT, 1.3M downloads
-on Modrinth, max Minecraft 1.21.1). All credit to Globox1997.
-Port status: reputation cap preserved; trade-memory system not
-ported (prepareOffersFor was replaced by updateTrades in 26.3).
+on Modrinth, max Minecraft 1.20.1). All credit to Globox1997.
+Full original logic is restored on this branch: prepareOffersFor
+redirects, reputation cap, and the per-job NBT trade memory.

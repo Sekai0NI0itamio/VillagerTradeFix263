@@ -3,12 +3,12 @@
   "id": "villagertradefix263",
   "version": "${version}",
   "name": "VillagerTradeFix",
-  "description": "Fixes villager trade abuse. Unofficial port of VillagerTradeFix by Globox1997 (MIT) for Minecraft 26.3 (Fabric). See NOTICE for credit.",
+  "description": "Fixes villager trade abuse: villagers remember their trades per job site and reputation discounts are capped. Unofficial full port for Minecraft 1.20.1 (Fabric) of VillagerTradeFix by Globox1997 (MIT). See NOTICE for credit.",
   "authors": ["Itamio", "Globox1997"],
   "contact": {"homepage": "https://github.com/Sekai0NI0itamio/VillagerTradeFix263", "sources": "https://github.com/Globox1997/VillagerTradeFix", "issues": "https://github.com/Sekai0NI0itamio/VillagerTradeFix263/issues"},
   "license": "MIT",
   "environment": "*",
   "entrypoints": {"main": ["itamio.villagertradefix.VillagerTradeFixMod"]},
   "mixins": ["villagertradefix263.mixins.json"],
-  "depends": {"fabricloader": ">=0.20.1", "minecraft": "~26.3", "java": ">=25", "fabric-api": "*"}
+  "depends": {"fabricloader": ">=0.16.14", "minecraft": "~1.20.1", "java": ">=17", "fabric-api": "*"}
 }

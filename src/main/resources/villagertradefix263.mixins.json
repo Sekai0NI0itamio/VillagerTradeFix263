@@ -2,7 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "itamio.villagertradefix.mixin",
-  "compatibilityLevel": "JAVA_21",
-  "mixins": ["VillagerMixin"],
+  "compatibilityLevel": "JAVA_17",
+  "mixins": ["VillagerEntityMixin"],
   "injectors": {"defaultRequire": 1}
 }

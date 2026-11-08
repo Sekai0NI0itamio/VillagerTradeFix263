@@ -1,7 +1,6 @@
 package itamio.villagertradefix.mixin;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,6 +19,8 @@ import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.nbt.NbtList;
+import net.minecraft.nbt.NbtOps;
 import net.minecraft.storage.ReadView;
 import net.minecraft.storage.WriteView;
 import net.minecraft.util.math.MathHelper;
@@ -101,7 +102,7 @@ public abstract class VillagerEntityMixin extends MerchantEntity {
                 if (this.getEntityWorld() instanceof ServerWorld serverWorld) {
                     this.fillRecipes(serverWorld);
                 } else {
-                    this.offers = new TradeOfferList(Collections.emptyList());
+                    this.offers = TradeOfferList.CODEC.parse(NbtOps.INSTANCE, new NbtList()).result().orElse(null);
                 }
             }
         }

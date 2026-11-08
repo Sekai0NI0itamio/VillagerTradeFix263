@@ -1,7 +1,19 @@
 NOTICE
-VillagerTradeFix (Itamio port for Minecraft 26.3)
-Unofficial port of VillagerTradeFix by Globox1997
-(https://github.com/Globox1997/VillagerTradeFix, MIT, 1.3M downloads
-on Modrinth, max Minecraft 1.21.1). All credit to Globox1997.
-Port status: reputation cap preserved; trade-memory system not
-ported (prepareOffersFor was replaced by updateTrades in 26.3).
+
+VillagerTradeFix (Itamio port for Minecraft 1.20.1, Forge)
+
+This mod is an unofficial full port of "VillagerTradeFix" by Globox1997
+(https://github.com/Globox1997/VillagerTradeFix, MIT).
+
+Original license: MIT (see LICENSE, preserved from the original project).
+
+The original mod fixes villager trade abuse: villagers remember their
+trades per job site (cycling job sites no longer resets trade offers,
+via per-job NBT trade memory in the Villager mixin), reputation
+discounts from trading are capped, and Hero of the Village discounts
+are configurable.
+
+All credit for the original concept, design, and logic goes to
+Globox1997. This port was created by Itamio to bring the full original
+logic to Minecraft 1.20.1 (Forge). Itamio does not take credit for
+any of the original assets or logic.

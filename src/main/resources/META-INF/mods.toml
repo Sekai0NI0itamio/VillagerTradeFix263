@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="villagertradefix"
+version="1.0.0"
+displayName="VillagerTradeFix"
+authors="Itamio, Globox1997"
+description='''Fixes villager trade abuse: villagers remember their trades per job site and reputation discounts are capped. Unofficial Forge port of VillagerTradeFix by Globox1997 (MIT).'''
+
+[[dependencies.villagertradefix]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.villagertradefix]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
